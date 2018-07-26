@@ -37,6 +37,16 @@ class ArrayBub{
         }
     }
 
+    public void bubbleSort1(){
+        for(int out=nElems-1;out>0;out--){
+            for(int in=1;in<=out;in++){
+                if(arr[in-1]>arr[in]){
+                    swap(in-1,in);
+                }
+            }
+        }
+    }
+
     private void swap(int front, int back){
         long tmp=arr[front];
         arr[front]=arr[back];
@@ -62,7 +72,7 @@ public class BubbleSortApp{
 
         arr.display();
 
-        arr.bubbleSort();
+        arr.bubbleSort1();
         arr.display();
         System.out.println((System.nanoTime()-t1)/1e6);
     }
